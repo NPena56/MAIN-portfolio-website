@@ -5,14 +5,16 @@
     box-sizing: border-box;
     margin: auto;
     padding: 0;
-    background-color: rgb(61, 71, 105);
+}
+body{
+    background: linear-gradient(to right, rgb(71, 70, 70)0%,rgb(119, 117, 170)100%,rgb(66, 66, 66)50%);
 }
 
-li,a,button{
+li,a,button,.table{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 16px;
-    color:rgb(237, 245, 252);
+    color:rgb(29, 29, 29);
     text-decoration: none;
 }
 
@@ -44,12 +46,12 @@ header{
 
 
 .nav__links li a:hover{
-   color:rgb(39, 85, 107)
+    color:rgba(29, 29, 29,0.5);
 }
 
 button{
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169,1);
+    background-color: rgb(187, 187, 187);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -57,7 +59,7 @@ button{
 }
 
 button:hover{
-    background-color: rgba(0, 136, 169,0.7);
+    background-color: rgba(187, 187, 187,0.7);
 }
 
 p{
@@ -66,4 +68,10 @@ p{
 
 div{
     font-family: 'Oswald', sans-serif;
+}
+
+.table{
+    align-items: center;
+    padding: 0;
+    justify-content: center;
 }

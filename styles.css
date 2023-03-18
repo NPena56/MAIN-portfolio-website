@@ -86,10 +86,36 @@ div{
 }
 
 .table{
-    align-items: center;
-    padding: 0;
-    justify-content: center;
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+    background-color: #f6f6f6;
+    font-size: 18px;
 }
+
+td, th {
+    border: 1px solid #7c7c7c;
+    padding: 20px;
+    
+  }
+
+th{
+    background-color: rgba(106, 104, 134, 0.712);
+    color: rgb(156, 156, 156);
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+tfoot > tr  {
+    background: black;
+    color: white;
+  }
+  
+  tbody > tr:hover {
+    background-color: rgba(46, 165, 95, 0.3);
+  }
 
 .headers{
     background-color: rgba(51, 51, 51, 0.514);

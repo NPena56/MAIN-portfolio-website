@@ -20,15 +20,29 @@ li,a,button,.table{
 }
 
 header{
-    display:flex;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
+   background-image:url(sub/programming-pic.png);
+   background-color: rgb(101, 84, 148);
+   background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
 }
 
 .logo{
     cursor: pointer;
     margin-right: auto;
+}
+
+.logoHome{
+    padding: 10px;
+    background-color: #00000000;
+}
+
+.logoHome:hover{
+    background-color: #00000000;
 }
 
 .nav__links{
@@ -49,6 +63,8 @@ header{
 .nav__links li a:hover{
    color:rgb(39, 85, 107)
 }
+
+
 
 button{
     padding: 9px 25px;

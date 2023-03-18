@@ -13,9 +13,9 @@ body{
 li,a,button,.table{
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
-    font-size: 16px;
-    color:rgb(29, 29, 29);
-    text-decoration: none;
+    font-size: 20px;
+    color:rgb(78, 78, 78);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 header{
@@ -23,11 +23,25 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
+   background-image:url(sub/programming-pic.png);
+   background-color: rgb(101, 84, 148);
+   background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
 }
 
 .logo{
     cursor: pointer;
     margin-right: auto;
+}
+
+.logoHome{
+    padding: 10px;
+    background-color: #00000000;
+}
+
+.logoHome:hover{
+    background-color: #00000000;
 }
 
 .nav__links{
@@ -46,7 +60,7 @@ header{
 
 
 .nav__links li a:hover{
-    color:rgba(29, 29, 29,0.5);
+    color:rgba(78, 78, 78,0.5);
 }
 
 button{
@@ -62,6 +76,7 @@ button:hover{
     background-color: rgba(187, 187, 187,0.7);
 }
 
+
 p{
     font-family: 'Oswald', sans-serif;
 }
@@ -74,4 +89,26 @@ div{
     align-items: center;
     padding: 0;
     justify-content: center;
+}
+
+.headers{
+    background-color: rgba(51, 51, 51, 0.514);
+    font-family: 'Oswald', sans-serif;
+    padding: 25px;
+}
+
+.paragraph{
+    padding : 10px;
+    padding-left : 25px;
+    color: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(61, 61, 61, 0.445);
+}
+
+.paraHead{
+    padding : 10px;
+    padding-left : 25px;
+    color: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(39, 39, 39);
 }

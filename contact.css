@@ -85,3 +85,10 @@ div{
     font-family: 'Oswald', sans-serif;
     
 }
+
+.mainwrapper{
+    width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

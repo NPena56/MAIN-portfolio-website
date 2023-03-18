@@ -112,3 +112,10 @@ div{
     font-family: 'Oswald', sans-serif;
     background-color: rgb(39, 39, 39);
 }
+
+.mainwrapper{
+    width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

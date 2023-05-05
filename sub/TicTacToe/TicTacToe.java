@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>TicTacToe in Java</title>
-</head>
-<body>
-    <div class="mainwrapper">
-        <header>
-            <a href="/index.html"><button class="logoHome"><img class="logo" src="logo.png" alt="logo" width="125"></button></a>
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="continuation.html">Continue</a></li>
-                    <li><a href="tictactoegame.html">TicTacToe</a></li>
-                </ul>  
-            </nav>
-            <a class="cta" href="contact.html"><button>Contact</button></a>
-        </header>
-
-            <div class="box">
-                <h1>TicTacToe</h1>
-                <p1>Couldn't get the code to embedd so heres the java code.</p1>
-
-                <p1>
-
-<br>
-<br>
-<b>
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -61,6 +28,7 @@ public class TicTacToe {
 				+ " \t ||\t ||\t";
 
 		System.out.println("\n\n"+board);
+		System.out.println(set);
 		while(!board.contains("[1-9]")||win) 
 		{
 			String spotP1="",spotP2="";
@@ -188,20 +156,3 @@ public class TicTacToe {
 	
 
 }
-</b>
-                </p1>
-                
-                <br><br>
-                Download Link to file instead
-                <br>
-                <a href="/sub/TicTacToe/TicTacToe.java" download>
-                    TicTacToe Java File Download
-                  </a>
-            </div>
-
-
-
-
-    </div>
-</body>
-</html>

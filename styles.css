@@ -14,7 +14,7 @@ li,a,button,.table{
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
     font-size: 20px;
-    color:rgb(78, 78, 78);
+    color:rgb(252, 252, 252);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -60,7 +60,7 @@ header{
 
 
 .nav__links li a:hover{
-    color:rgba(78, 78, 78,0.5);
+    color:rgba(252, 252, 252,0.5);
 }
 
 button{

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>TicTacToe in Java</title>
+</head>
+<body>
+    <div class="mainwrapper">
+        <header>
+            <a href="/index.html"><button class="logoHome"><img class="logo" src="logo.png" alt="logo" width="125"></button></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="continuation.html">Continue</a></li>
+                    <li><a href="tictactoegame.html">TicTacToe</a></li>
+                </ul>  
+            </nav>
+            <a class="cta" href="contact.html"><button>Contact</button></a>
+        </header>
+
+            <div class="box">
+                <p>
+                    Lets Play Some TicTacToe
+                  </p>
+                  
+                  <input type="text" id="stdin"/>
+                  <p id="credits"></p>
+                  <form id="form">
+                    <button id="run">Run</button>
+                  </form>
+                  <code id="output"></code>
+                  
+                  <script>
+                  var run = document.getElementById("run");
+                  
+                  run.addEventListener("click", function (e) {
+                    
+                    e.preventDefault();
+                    
+                    var stdin = document.getElementById("stdin");
+                    var form = document.getElementById("form");
+                    var credits = document.getElementById("credits");
+                    var output = document.getElementById("output");
+                    
+                    output.innerHTML = "Loading...";
+                    
+                    console.log(stdin.value);
+                    
+                    var obj = {};
+                    obj["clientId"] = "1e600d1da36875781675a12a1d359e68";
+                    obj["clientSecret"] = "dd1c3491d023b07f591cc5d2990be20573d1c17a528807799747574d057eb98b";
+                    obj["script"] = "import java.util.Arrays;\r\nimport java.util.Scanner;\r\nimport java.util.TreeSet;\r\n\r\npublic class TicTacToe {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\tchar[] arr=new char[9];\r\n\t\tArrays.fill(arr, 'P');\r\n\t\t\r\n\t\tTreeSet<Integer> set=new TreeSet<>();\r\n\t\t\r\n\t\t//fill treeset\r\n\t\tfor(int i=1;i<=9;i++)\r\n\t\t\tset.add(i);\r\n\t\t\r\n\t\tboolean win=false, XPlayer=false, OPlayer=false;\r\n\t\tString board=\"\\t ||\\t || \\n\"\r\n\t\t\t\t+ \"    7    ||   8  ||   9   \\n \"\r\n\t\t\t\t+ \"\\t ||\\t ||\\t  \\n\"\r\n\t\t\t\t+ \"==========================\\n\"\r\n\t\t\t\t+ \"\\t ||\\t ||\\t  \\n\"\r\n\t\t\t\t+ \"    4    ||   5  ||   6    \\n\"\r\n\t\t\t\t+ \" \\t ||\\t ||\\t  \\n\"\r\n\t\t\t\t+ \"==========================\\n\"\r\n\t\t\t\t+ \"\\t ||\\t ||\\t  \\n\"\r\n\t\t\t\t+ \"    1    ||   2  ||   3    \\n\"\r\n\t\t\t\t+ \" \\t ||\\t ||\\t\";\r\n\r\n\t\tSystem.out.println(\"\\n\\n\"+board);\r\n\t\tSystem.out.println(set);\r\n\t\twhile(!board.contains(\"[1-9]\")||win) \r\n\t\t{\r\n\t\t\tString spotP1=\"\",spotP2=\"\";\r\n\t\t\tScanner pInput=new Scanner(System.in);\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t//Player X Starts\r\n\t\t\t\r\n\t\t\t \r\n\t\t\t while(!spotP1.matches(\"[0-9]\")||set.contains(Integer.parseInt(spotP1)))\r\n\t\t\t {\r\n\t\t\t\t\tSystem.out.print(\"\\nPlayer X go first input your spot: \");\r\n\t\t\t\t\tspotP1=pInput.next()+\"\";\r\n\t\t\t\t\tset.remove(Integer.parseInt(spotP1));\r\n\t\t\t }\r\n\t\t\t\r\n\t\t\t\r\n\t\t\tif(arr[Integer.parseInt(spotP1)-1]=='P')\r\n\t\t\t\tarr[Integer.parseInt(spotP1)-1]='X';\r\n\t\t\t\r\n\t\t\tboard=board.replace(spotP1.charAt(0), 'X');\r\n\t\t\tSystem.out.println(\"\\n\\n\");\r\n\t\t\tSystem.out.println(\"\\n\\n\"+board);\r\n\t\t\t\r\n\t\t\tif(\t\t(arr[0]=='X'&&arr[1]=='X'&&arr[2]=='X')\r\n\t\t\t\t\t||\t(arr[0]=='X'&&arr[3]=='X'&&arr[6]=='X')\r\n\t\t\t\t\t||  (arr[6]=='X'&&arr[7]=='X'&&arr[8]=='X')\r\n\t\t\t\t\t||  (arr[8]=='X'&&arr[5]=='X'&&arr[2]=='X')\r\n\t\t\t\t\t||  (arr[8]=='X'&&arr[4]=='X'&&arr[0]=='X')\r\n\t\t\t\t\t||  (arr[6]=='X'&&arr[4]=='X'&&arr[2]=='X')\r\n\t\t\t\t\t||  (arr[5]=='X'&&arr[4]=='X'&&arr[3]=='X')\r\n\t\t\t\t\t||  (arr[7]=='X'&&arr[4]=='X'&&arr[1]=='X')\r\n\t\t\t\t  )\r\n\t\t\t\t{\r\n\t\t\t\t\twin=true;\r\n\t\t\t\t\tXPlayer=true;\r\n\t\t\t\t}\r\n\t\t\t\t\t//Do samething for O Player\r\n\t\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\r\n\t\t\t\t\tif(set.isEmpty())\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tSystem.out.println(\"DRAW\");\r\n\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t}\r\n\t\t\t\t\tif(win) \r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tif(XPlayer)\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tSystem.out.println(\"X PLAYER WINS!\");\r\n\t\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\telse\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tSystem.out.println(\"O PLAYER WINS!\");\r\n\t\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t//Player O Starts\r\n\t\t\t \r\n\t\t\twhile(!spotP2.matches(\"[0-9]\")||set.contains(Integer.parseInt(spotP1)))\r\n\t\t\t{\r\n\t\t\t\tSystem.out.print(\"\\nPlayer O go first input your spot: \");\r\n\t\t\t\tspotP2=pInput.next()+\"\";\r\n\t\t\t\tset.remove(Integer.parseInt(spotP2));\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tif(arr[Integer.parseInt(spotP2)-1]=='P')\r\n\t\t\t\tarr[Integer.parseInt(spotP2)-1]='O';\r\n\t\t\t\r\n\t\t\tboard=board.replace(spotP2.charAt(0), 'O');\r\n\t\t\tSystem.out.println(\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\");\r\n\t\t\tSystem.out.println(\"\\n\\n\"+board);\r\n\t\t\t//Check for winning patterns here\r\n\t\t\t\r\n\t\t\t\t//Do samething for O Player\r\n\t\t\t\tif(\t\t(arr[0]=='O'&&arr[1]=='O'&&arr[2]=='O')\r\n\t\t\t\t\t||\t(arr[0]=='O'&&arr[3]=='O'&&arr[6]=='O')\r\n\t\t\t\t\t||  (arr[6]=='O'&&arr[7]=='O'&&arr[8]=='O')\r\n\t\t\t\t\t||  (arr[8]=='O'&&arr[5]=='O'&&arr[2]=='O')\r\n\t\t\t\t\t||  (arr[8]=='O'&&arr[4]=='O'&&arr[0]=='O')\r\n\t\t\t\t\t||  (arr[6]=='O'&&arr[4]=='O'&&arr[2]=='O')\r\n\t\t\t\t\t||  (arr[5]=='O'&&arr[4]=='O'&&arr[3]=='O')\r\n\t\t\t\t\t||  (arr[7]=='O'&&arr[4]=='O'&&arr[1]=='O')\r\n\t\t\t\t  )\r\n\t\t\t\t{\r\n\t\t\t\t\twin=true;\r\n\t\t\t\t\tOPlayer=true;\r\n\t\t\t\t}\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\tif(set.isEmpty())\r\n\t\t\t\t{\r\n\t\t\t\t\tSystem.out.println(\"DRAW\");\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t}\r\n\t\t\t\tif(win) \r\n\t\t\t\t{\r\n\t\t\t\t\tif(XPlayer)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tSystem.out.println(\"X PLAYER WINS!\");\r\n\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t}\r\n\t\t\t\t\telse\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tSystem.out.println(\"O PLAYER WINS!\");\r\n\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\t\r\n\t\r\n\t\r\n\t\r\n\r\n}\r\n";
+                    obj["language"] = "java";
+                    obj["versionIndex"] = "0";
+                    obj["stdin"] = stdin.value;
+                    var jsonStr = JSON.stringify(obj);
+                    
+                    console.log(jsonStr);
+                    
+                    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+                    const url = "https://api.jdoodle.com/v1/execute";
+                    fetch(proxyurl + url, {
+                      method: 'post',
+                      headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                      },
+                      body: jsonStr
+                    })
+                    .then(response => {
+                      return response.json()
+                    })
+                    .then(data => {
+                      console.log(data);
+                      var outputStr = data.output;
+                      console.log(outputStr);
+                      var formattedOutput = outputStr.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                      output.innerHTML = formattedOutput;
+                    })
+                    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+                    
+                    const creditsUrl = "https://api.jdoodle.com/v1/credit-spent";
+                    fetch(proxyurl + creditsUrl, {
+                      method: 'post',
+                      headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                      },
+                      body: jsonStr
+                    })
+                    .then(response => {
+                      return response.json()
+                    })
+                    .then(data => {
+                      console.log(data);
+                      var creditsLeft = 200 - data.used;
+                      console.log(credits);
+                      credits.innerHTML = "Runs left: " + creditsLeft;
+                    })
+                    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+                    
+                    
+                    
+                    
+                  });
+                  </script>
+            </div>
+
+
+
+
+    </div>
+</body>
+</html>

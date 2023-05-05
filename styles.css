@@ -145,3 +145,11 @@ tfoot > tr  {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
+.box {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: rgba(120, 122, 238, 0.4);
+    padding: 20px;
+  }

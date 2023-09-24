@@ -128,6 +128,7 @@ tfoot > tr  {
     padding-left : 25px;
     color: rgb(0, 0, 0);
     font-family: 'Oswald', sans-serif;
+    font-size: 25px;
     background-color: rgba(61, 61, 61, 0.445);
 }
 
@@ -153,3 +154,11 @@ tfoot > tr  {
     background-color: rgba(120, 122, 238, 0.4);
     padding: 20px;
   }
+  .title{
+    padding : 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    background-color: rgb(39, 39, 39);
+}

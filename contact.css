@@ -99,6 +99,7 @@ div{
     padding-left : 100px;
     color: rgb(0, 0, 0);
     font-family: 'Oswald', sans-serif;
+    font-size: 20px;
 }
 
 .paraHead{
@@ -106,5 +107,15 @@ div{
     padding-left : 25px;
     color: rgb(0, 0, 0);
     font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    background-color: rgb(39, 39, 39);
+}
+
+.title{
+    padding : 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
     background-color: rgb(39, 39, 39);
 }

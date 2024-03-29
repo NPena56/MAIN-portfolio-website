@@ -1,0 +1,119 @@
+form {
+    display: flexbox;
+    align-items: center;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.formAdv {
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+}
+
+div{
+   padding-left: 1650px;
+   padding-top: 30px;
+   font-family: sans-serif;
+   color: black;
+   font-size: 15px;
+}
+
+body form{
+    font-family: sans-serif;
+    color: black;
+    font-size: 15px;
+}
+
+body{
+    font-family: sans-serif;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.searchbuttons{
+    font-size: 15px;
+    margin: 5px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(208, 207, 207);
+    border-width: 0px;
+    border-radius: 3px;
+}
+
+.searchbuttons:hover{
+    margin: 5px;
+    margin-top: 25px;
+    padding: 9px;
+    background-color: rgb(208, 207, 207);
+    border-width: 1px;
+    border-color: black;
+}
+
+.searchbar{
+    width: 1000px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.searchbar:hover{
+    width: 1002px;
+    height: 37px;
+    background-color: rgb(225, 225, 225);
+    border-width: 1px;
+}
+
+.smallsearchbar{
+    width: 650px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+.smallsearchbar:hover{
+    width: 650px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+thead{
+    font-size: 20px;
+}
+
+.inputAdv{
+    width: 150px;
+    height: 35px;
+    margin-left: 607px;
+    margin-top: 30px;
+    background-color: rgba(75,142,250,255);
+    border-width: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+input:hover{
+    background-color: rgba(55,124,234,255);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h4{
+    margin-top: 100px;
+}
+
+
+
+
